@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">EcoTraining</span>
+              <span className="text-xl font-bold">Unique Quality Training</span>
             </div>
             <p className="text-gray-400 text-sm">
               Leading provider of ISO 14001 Environmental Management Systems training and certification services.
@@ -53,17 +53,17 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>info@ecotraining.com</span>
+                <span>info@uniquequalitytraining.com</span>
               </div>
               <p>123 Green Street</p>
-              <p>Eco City, EC 12345</p>
-              <p>+1 (555) 123-4567</p>
+              <p>India</p>
+              <p>+91 9876543210</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 EcoTraining. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2024 Unique Quality Training. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>

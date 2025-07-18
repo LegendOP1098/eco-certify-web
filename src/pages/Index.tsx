@@ -3,8 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { Leaf, Shield, Users, Award, ArrowDown, Circle, CheckCircle } from "lucide-react";
+import { Leaf, Shield, Users, Award, ArrowDown, Circle, CheckCircle, Clock, Target } from "lucide-react";
 
 const Index = () => {
   return (
@@ -150,12 +149,11 @@ const Index = () => {
                 ))}
               </div>
 
+              {/* Remove the Link components and keep just the buttons */}
               <div className="mt-8">
-                <Link to="/iso-14001-environmental-management-systems">
-                  <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
-                    Learn More About ISO 14001
-                  </Button>
-                </Link>
+                <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                  Learn More About ISO 14001
+                </Button>
               </div>
             </div>
 
@@ -170,6 +168,160 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ISO 14001 Details Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Key Benefits of ISO 14001
+            </h2>
+            <p className="text-xl text-gray-600">
+              Discover how ISO 14001 can transform your organization
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Leaf,
+                title: "Environmental Protection",
+                description: "Reduce environmental impact and carbon footprint while protecting natural resources."
+              },
+              {
+                icon: Shield,
+                title: "Legal Compliance",
+                description: "Ensure compliance with environmental regulations and avoid costly penalties."
+              },
+              {
+                icon: Target,
+                title: "Cost Reduction",
+                description: "Lower operational costs through improved resource efficiency and waste reduction."
+              },
+              {
+                icon: Users,
+                title: "Stakeholder Confidence",
+                description: "Build trust with customers, investors, and communities through environmental responsibility."
+              },
+              {
+                icon: CheckCircle,
+                title: "Competitive Advantage",
+                description: "Differentiate your organization in the market with recognized environmental credentials."
+              },
+              {
+                icon: Circle,
+                title: "Risk Management",
+                description: "Identify and mitigate environmental risks before they become costly problems."
+              }
+            ].map((benefit, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Training Programs Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Training Programs
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive courses tailored to your career goals
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "ISO 14001 Foundation",
+                duration: "2 Days",
+                level: "Beginner",
+                price: "$",
+                description: "Perfect introduction to environmental management systems and ISO 14001 fundamentals.",
+                features: [
+                  "Understanding EMS principles",
+                  "ISO 14001 requirements overview",
+                  "Environmental aspects identification",
+                  "Legal compliance basics",
+                  "Certificate of attendance"
+                ]
+              },
+              {
+                title: "ISO 14001 Implementation",
+                duration: "3 Days",
+                level: "Intermediate",
+                price: "$$",
+                description: "Learn to implement and maintain an effective environmental management system.",
+                features: [
+                  "EMS planning and design",
+                  "Documentation requirements",
+                  "Internal audit techniques",
+                  "Management review process",
+                  "Implementation certificate"
+                ]
+              },
+              {
+                title: "ISO 14001 Lead Auditor",
+                duration: "5 Days",
+                level: "Advanced",
+                price: "$$$",
+                description: "Become a certified lead auditor with comprehensive auditing skills and certification.",
+                features: [
+                  "Advanced auditing techniques",
+                  "Audit planning and execution",
+                  "Report writing skills",
+                  "Corrective action management",
+                  "Lead Auditor certification"
+                ]
+              }
+            ].map((course, index) => (
+              <Card key={index} className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${index === 1 ? 'ring-2 ring-green-500' : ''}`}>
+                {index === 1 && (
+                  <div className="bg-green-500 text-white text-center py-2 rounded-t-lg">
+                    <span className="font-semibold">Most Popular</span>
+                  </div>
+                )}
+                <CardContent className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{course.title}</h3>
+                    <div className="flex justify-center items-center space-x-4 text-sm text-gray-600 mb-4">
+                      <div className="flex items-center space-x-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{course.duration}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Users className="w-4 h-4" />
+                        <span>{course.level}</span>
+                      </div>
+                    </div>
+                    <div className="text-3xl font-bold text-green-600 mb-4">{course.price}</div>
+                    <p className="text-gray-600 mb-6">{course.description}</p>
+                  </div>
+                  <div className="space-y-3 mb-8">
+                    {course.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                    Enroll Now
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -180,16 +332,12 @@ const Index = () => {
             Join our next ISO 14001 training session and become a certified environmental management professional.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/training">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-                View Training Programs
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-green-600">
-                Get In Touch
-              </Button>
-            </Link>
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
+              Start Your Journey
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-green-600">
+              Learn More
+            </Button>
           </div>
         </div>
       </section>
