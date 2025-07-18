@@ -11,14 +11,14 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-16 bg-gradient-to-br from-green-50 to-emerald-100 min-h-screen flex items-center">
+      <section className="pt-16 bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Certify Your
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600"> Sustainability</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600"> Sustainability</span>
                   <br />with ISO 14001
                 </h1>
                 <p className="text-xl text-gray-600 max-w-2xl">
@@ -28,7 +28,7 @@ const Index = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-lg px-8 py-6">
+                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-lg px-8 py-6">
                   Start Your Journey
                 </Button>
                 <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-green-200 hover:bg-green-50">
@@ -38,15 +38,15 @@ const Index = () => {
 
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">5000+</div>
+                  <div className="text-3xl font-bold text-blue-600">5000+</div>
                   <div className="text-gray-600">Certified Professionals</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">98%</div>
+                  <div className="text-3xl font-bold text-blue-600">98%</div>
                   <div className="text-gray-600">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">15+</div>
+                  <div className="text-3xl font-bold text-blue-600">15+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
               </div>
@@ -60,14 +60,14 @@ const Index = () => {
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl -z-10 opacity-20"></div>
+              <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl -z-10 opacity-20"></div>
               <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl -z-10 opacity-20"></div>
             </div>
           </div>
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-green-600" />
+          <ArrowDown className="w-6 h-6 text-blue-600" />
         </div>
       </section>
 
@@ -108,7 +108,7 @@ const Index = () => {
             ].map((feature, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
@@ -121,7 +121,7 @@ const Index = () => {
       </section>
 
       {/* ISO 14001 Overview */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -143,7 +143,7 @@ const Index = () => {
                   "Drive continuous improvement"
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <CheckCircle className="w-5 h-5 text-blue-500" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -151,7 +151,7 @@ const Index = () => {
 
               {/* Remove the Link components and keep just the buttons */}
               <div className="mt-8">
-                <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
                   Learn More About ISO 14001
                 </Button>
               </div>
@@ -214,7 +214,7 @@ const Index = () => {
             ].map((benefit, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
@@ -282,9 +282,9 @@ const Index = () => {
                 ]
               }
             ].map((course, index) => (
-              <Card key={index} className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${index === 1 ? 'ring-2 ring-green-500' : ''}`}>
+              <Card key={index} className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${index === 1 ? 'ring-2 ring-blue-500' : ''}`}>
                 {index === 1 && (
-                  <div className="bg-green-500 text-white text-center py-2 rounded-t-lg">
+                  <div className="bg-blue-500 text-white text-center py-2 rounded-t-lg">
                     <span className="font-semibold">Most Popular</span>
                   </div>
                 )}
@@ -301,18 +301,18 @@ const Index = () => {
                         <span>{course.level}</span>
                       </div>
                     </div>
-                    <div className="text-3xl font-bold text-green-600 mb-4">{course.price}</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-4">{course.price}</div>
                     <p className="text-gray-600 mb-6">{course.description}</p>
                   </div>
                   <div className="space-y-3 mb-8">
                     {course.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
                     Enroll Now
                   </Button>
                 </CardContent>
@@ -323,7 +323,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Make an Environmental Impact?
@@ -335,7 +335,7 @@ const Index = () => {
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
               Start Your Journey
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-green-600">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-blue-600">
               Learn More
             </Button>
           </div>
